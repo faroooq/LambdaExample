@@ -1,4 +1,4 @@
-package com.wadhara.destination;
+package com.frq.destination;
 
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.LambdaLogger;

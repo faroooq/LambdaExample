@@ -1,10 +1,10 @@
-package com.wadhara.video2;
+package com.frq.video2;
 
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.LambdaLogger;
 import com.amazonaws.services.lambda.runtime.events.S3Event;
 import com.amazonaws.services.lambda.runtime.events.models.s3.S3EventNotification;
-import com.wadhara.video2.model.Employee;
+import com.frq.video2.model.Employee;
 
 import java.util.HashMap;
 import java.util.List;

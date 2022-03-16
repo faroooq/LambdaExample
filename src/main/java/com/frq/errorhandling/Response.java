@@ -1,4 +1,4 @@
-package com.wadhara.errorhandling;
+package com.frq.errorhandling;
 
 public class Response<T> {
 

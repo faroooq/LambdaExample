@@ -1,4 +1,4 @@
-package com.wadhara.dlq;
+package com.frq.dlq;
 
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.LambdaLogger;

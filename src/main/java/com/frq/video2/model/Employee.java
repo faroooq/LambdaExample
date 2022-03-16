@@ -1,4 +1,4 @@
-package com.wadhara.video2.model;
+package com.frq.video2.model;
 
 public class Employee {
     private String name;

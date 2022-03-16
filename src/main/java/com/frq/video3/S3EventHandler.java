@@ -1,4 +1,4 @@
-package com.wadhara.video3;
+package com.frq.video3;
 
 import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
 import com.amazonaws.services.lambda.runtime.Context;
