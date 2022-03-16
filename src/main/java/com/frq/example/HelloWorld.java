@@ -1,10 +1,10 @@
-package com.frq.video2;
+package com.frq.example;
 
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.LambdaLogger;
 import com.amazonaws.services.lambda.runtime.events.S3Event;
 import com.amazonaws.services.lambda.runtime.events.models.s3.S3EventNotification;
-import com.frq.video2.model.Employee;
+import com.frq.example.model.Employee;
 
 import java.util.HashMap;
 import java.util.List;
@@ -19,19 +19,28 @@ public class HelloWorld
 {
     //String input/output
     public String handler(String name){
+
         return "Hello " + name;
     }
 
-    //boolean
+    //boolean true
     public boolean handlerBoolean(boolean flag){
         return !flag;
     }
 
-    //List of integer and return sum of all the passed integers
+    //List of integer and return sum of all the passed integers [1,2,3,4]
     public int handlerList(List<Integer> ints){
+
         return ints.stream().mapToInt(Integer::intValue).sum();
     }
 
+    /*
+     {
+        "farooq": 1000,
+        "anil": 2000,
+        "ravi": 3000
+     }
+     */
     //List of integer and return sum of all the passed integers
     public Map<String, Integer> handlerMap(Map<String, Integer> inputMap){
         final Map<String, Integer> updatedSalaryMap = new HashMap<>();
@@ -39,6 +48,12 @@ public class HelloWorld
         return updatedSalaryMap;
     }
 
+    /*
+    [
+        { "name": "Farooq", "id":101 },
+        { "name": "Akash", "id":102 }
+    ]
+    */
     //POJO
     public List<Employee> handlerPojo(List<Employee> employeeList){
         return employeeList.stream()

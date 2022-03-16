@@ -1,4 +1,4 @@
-package com.frq.video3;
+package com.frq.s3event;
 
 import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
 import com.amazonaws.services.lambda.runtime.Context;

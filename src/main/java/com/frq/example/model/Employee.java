@@ -1,4 +1,4 @@
-package com.frq.video2.model;
+package com.frq.example.model;
 
 public class Employee {
     private String name;
