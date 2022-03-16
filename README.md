@@ -1,3 +1,4 @@
-# Lambda Code Examples
-This repo contains all the code examples that I demonstarted in tutorials on my YouTube channel - https://www.youtube.com/c/Ajayfrq
+#Resources:
 
+#Postgres
+https://stackabuse.com/working-with-postgresql-in-java/

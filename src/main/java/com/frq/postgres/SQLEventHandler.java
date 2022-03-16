@@ -21,19 +21,9 @@ import java.util.logging.Logger;
 
 public class SQLEventHandler implements RequestHandler<S3Event, Boolean> {
     private static final Dao<Customer, Integer> CUSTOMER_DAO = new PostgresSqlDao();
-    private static final AmazonS3 s3Client = AmazonS3Client.builder()
-            .withCredentials(new DefaultAWSCredentialsProviderChain())
-            .build();
+
     @Override
     public Boolean handleRequest(S3Event input, Context context) {
-
-        try {
-            Customer customer = getCustomer(1);
-        } catch (Exception ex) {
-            ex.printStackTrace();
-//            Logger.log(Level.WARNING, ex.getMessage());
-        }
-
         // Test whether a customer can be added to the database
         Customer firstCustomer =
                 new Customer(1, "Manuel", "Kelley", "ManuelMKelley@jourrapide.com");
@@ -44,6 +34,13 @@ public class SQLEventHandler implements RequestHandler<S3Event, Boolean> {
         addCustomer(firstCustomer).ifPresent(firstCustomer::setId);
         addCustomer(secondCustomer).ifPresent(secondCustomer::setId);
         addCustomer(thirdCustomer).ifPresent(thirdCustomer::setId);
+
+        try {
+            Customer customer = getCustomer(1);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+//            Logger.log(Level.WARNING, ex.getMessage());
+        }
         return true;
     }
 

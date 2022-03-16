@@ -15,6 +15,7 @@ public class PostgresSqlDao implements Dao<Customer, Integer> {
     private final Optional<Connection> connection;
 
     public PostgresSqlDao() {
+
         this.connection = JdbcConnection.getConnection();
     }
 

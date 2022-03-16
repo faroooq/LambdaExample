@@ -19,7 +19,6 @@ public class HelloWorld
 {
     //String input/output
     public String handler(String name){
-
         return "Hello " + name;
     }
 
@@ -29,11 +28,9 @@ public class HelloWorld
     }
 
     //List of integer and return sum of all the passed integers [1,2,3,4]
-    public int handlerList(List<Integer> ints){
-
+    public int handlerList(List<Integer> ints) {
         return ints.stream().mapToInt(Integer::intValue).sum();
     }
-
     /*
      {
         "farooq": 1000,
