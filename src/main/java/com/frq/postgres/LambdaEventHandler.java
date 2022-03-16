@@ -10,6 +10,7 @@ import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.s3.model.S3Object;
 import com.amazonaws.services.s3.model.S3ObjectInputStream;
+import org.apache.commons.logging.Log;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -19,8 +20,9 @@ import java.util.Optional;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class SQLEventHandler implements RequestHandler<S3Event, Boolean> {
+public class LambdaEventHandler implements RequestHandler<S3Event, Boolean> {
     private static final Dao<Customer, Integer> CUSTOMER_DAO = new PostgresSqlDao();
+    Logger logger = Logger.getLogger("SQLEventHandler");
 
     @Override
     public Boolean handleRequest(S3Event input, Context context) {
@@ -37,6 +39,7 @@ public class SQLEventHandler implements RequestHandler<S3Event, Boolean> {
 
         try {
             Customer customer = getCustomer(1);
+//            logger.log("DEBUG" + customer.toString());
         } catch (Exception ex) {
             ex.printStackTrace();
 //            Logger.log(Level.WARNING, ex.getMessage());

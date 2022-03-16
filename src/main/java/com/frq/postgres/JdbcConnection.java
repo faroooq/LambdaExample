@@ -15,9 +15,9 @@ public class JdbcConnection {
 
     public static Optional<Connection> getConnection() {
         if (connection.isEmpty()) {
-            String url = "jdbc:postgresql://localhost:5432/customer";
+            String url = "jdbc:postgresql://localhost:5432/postgres";
             String user = "farooq";
-            String password = "postgres";
+            String password = "Post12345";
 
             try {
                 connection = Optional.ofNullable(

@@ -16,11 +16,11 @@ public class CustomerApplication {
         // the database is queried for a non-existent customer.
         // But, if the customer does exist, the details will be printed
         // on the console
-        try {
-            Customer customer = getCustomer(1);
-        } catch (Exception ex) {
-            LOGGER.log(Level.WARNING, ex.getMessage());
-        }
+//        try {
+//            Customer customer = getCustomer(1);
+//        } catch (Exception ex) {
+//            LOGGER.log(Level.WARNING, ex.getMessage());
+//        }
 
         // Test whether a customer can be added to the database
         Customer firstCustomer =
